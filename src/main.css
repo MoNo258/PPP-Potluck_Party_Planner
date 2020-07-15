@@ -59,8 +59,7 @@ header i {
 }
 
 .display-item button {
-  margin-top: 20px;
-  margin-left: auto;
+  margin: 10px 10px 10px auto;
   display: block;
 }
 
@@ -78,6 +77,11 @@ input {
   border: 0;
   display: block;
   width: 100%;
+  outline: none;
+}
+
+input:focus{
+  border: 1px solid #FA6900;
 }
 
 ul {
@@ -113,11 +117,16 @@ li h3 {
 
 li p {
   padding: 15px;
+  margin: 0;
 }
 
 form button {
   width: 100%;
   margin-top: 10px;
+}
+
+.fa-trash-o {
+  font-size: 16px;
 }
 
 button {

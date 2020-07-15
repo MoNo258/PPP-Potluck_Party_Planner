@@ -84,7 +84,8 @@ class App extends Component {
                                         <li key={item.id}>
                                             <h3>{item.title}</h3>
                                             <p>by: {item.user}</p>
-                                            <button onClick={() => this.removeItem(item.id)}>Remove Item</button>
+                                            <button onClick={() => this.removeItem(item.id)}>
+                                                <i className="fa fa-trash-o" aria-hidden="true"></i> Remove Item</button>
                                         </li>
                                     )
                                 })}
