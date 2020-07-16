@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './main.css';
-import firebase from "./firebase";
+import firebase, {auth, provider} from "./firebase";
 
 class App extends Component {
     constructor() {
@@ -9,9 +9,12 @@ class App extends Component {
             currentItem: '',
             username: '',
             items: [],
+            user: null
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.login = this.login.bind(this);
+        this.logout = this.logout.bind(this);
     }
 
     handleChange(event) {
@@ -34,9 +37,28 @@ class App extends Component {
         });
     }
 
-    removeItem(itemId){
+    removeItem(itemId) {
         const itemRef = firebase.database().ref(`/items/${itemId}`);
         itemRef.remove();
+    }
+
+    login() {
+        auth.signInWithPopup(provider)
+            .then(result => {
+                const user = result.user;
+                this.setState({
+                    user
+                });
+            });
+    }
+
+    logout() {
+        auth.signOut()
+            .then(() => {
+                this.setState({
+                    user: null
+                });
+            });
     }
 
     componentDidMount() {
@@ -64,6 +86,12 @@ class App extends Component {
                 <header>
                     <div className='wrapper'>
                         <h1>Potluck Party Planner</h1>
+                        {this.state.user
+                            ?
+                            <button onClick={this.logout}>Log Out</button>
+                            :
+                            <button onClick={this.login}>Log In</button>
+                        }
                     </div>
                 </header>
                 <div className='container'>
@@ -85,7 +113,8 @@ class App extends Component {
                                             <h3>{item.title}</h3>
                                             <p>by: {item.user}</p>
                                             <button onClick={() => this.removeItem(item.id)}>
-                                                <i className="fa fa-trash-o" aria-hidden="true"></i> Remove Item</button>
+                                                <i className="fa fa-trash-o" aria-hidden="true"></i> Remove Item
+                                            </button>
                                         </li>
                                     )
                                 })}
