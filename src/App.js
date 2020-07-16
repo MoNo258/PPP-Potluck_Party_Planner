@@ -28,7 +28,7 @@ class App extends Component {
         const itemRef = firebase.database().ref('items');
         const item = {
             title: this.state.currentItem,
-            user: this.state.username,
+            user: this.state.user.displayName || this.state.user.email,
         };
         itemRef.push(item);
         this.setState({
@@ -62,6 +62,14 @@ class App extends Component {
     }
 
     componentDidMount() {
+        //keep user login even when app refreshes
+        auth.onAuthStateChanged(user => {
+            if (user) {
+                this.setState({
+                    user
+                });
+            }
+        });
         const itemsRef = firebase.database().ref('items');
         itemsRef.on('value', (snapshot) => {
             let items = snapshot.val();
@@ -94,34 +102,52 @@ class App extends Component {
                         }
                     </div>
                 </header>
-                <div className='container'>
-                    <section className='add-item'>
-                        <form onSubmit={this.handleSubmit}>
-                            <input type="text" name='username' placeholder='Your name?' value={this.state.username}
-                                   onChange={this.handleChange}/>
-                            <input type="text" name='currentItem' placeholder='What are you bringing?'
-                                   value={this.state.currentItem} onChange={this.handleChange}/>
-                            <button>Add Item</button>
-                        </form>
-                    </section>
-                    <section className='display-item'>
-                        <div className="wrapper">
-                            <ul>
-                                {this.state.items.map((item) => {
-                                    return (
-                                        <li key={item.id}>
-                                            <h3>{item.title}</h3>
-                                            <p>by: {item.user}</p>
-                                            <button onClick={() => this.removeItem(item.id)}>
-                                                <i className="fa fa-trash-o" aria-hidden="true"></i> Remove Item
-                                            </button>
-                                        </li>
-                                    )
-                                })}
-                            </ul>
+                {this.state.user
+                    ?
+                    <div>
+                        <div>
+                            <div className='user-profile'>
+                                <img src={this.state.user.photoURL} alt='user profile'/>
+                            </div>
                         </div>
-                    </section>
-                </div>
+                        <div className='container'>
+                            <section className='add-item'>
+                                <form onSubmit={this.handleSubmit}>
+                                    <input type="text" name='username' placeholder='Your name?'
+                                           value={this.state.user.displayName || this.state.user.email} readOnly={true} />
+                                    <input type="text" name='currentItem' placeholder='What are you bringing?'
+                                           value={this.state.currentItem} onChange={this.handleChange}/>
+                                    <button>Add Item</button>
+                                </form>
+                            </section>
+                            <section className='display-item'>
+                                <div className="wrapper">
+                                    <ul>
+                                        {this.state.items.map((item) => {
+                                            return (
+                                                <li key={item.id}>
+                                                    <h3>{item.title}</h3>
+                                                    <p>by: {item.user}
+                                                        {item.user === this.state.user.displayName || item.user === this.state.user.email
+                                                            ?
+                                                            <button onClick={() => this.removeItem(item.id)}>
+                                                                <i className="fa fa-trash-o" aria-hidden="true"></i> Remove Item
+                                                            </button>
+                                                            : null}
+                                                    </p>
+                                                </li>
+                                            )
+                                        })}
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    :
+                    <div className='wrapper'>
+                        <p>You must be logged in to participate in the event and see status :)</p>
+                    </div>
+                }
             </div>
         )
     }
