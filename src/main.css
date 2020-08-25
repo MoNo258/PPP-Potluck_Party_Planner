@@ -163,3 +163,625 @@ button {
   border-radius: 50%;
   max-width: 100%;
 }
+
+@media (max-width: 1200px) {
+  header {
+    padding: 33px 0 25px 15px;
+  }
+  header p {
+    width: 400px;
+    margin: 0 auto;
+  }
+  header .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  header h1 {
+    font-size: 25px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+  }
+  .fa {
+    font-size: 22px;
+    transform: translateY(50deg);
+  }
+  header i {
+    vertical-align: middle;
+    margin-left: 12px;
+  }
+  .container {
+    display: flex;
+    /*changed*/
+    max-width: 980px;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+  .wrapper {
+    /*changed*/
+    max-width: 930px;
+    margin: 0 auto;
+  }
+  .add-item {
+    border-top: 3px solid #103D5D;
+    margin-right: 50px;
+    padding: 60px 18px;
+    margin-bottom: 34px;
+    /*changed*/
+    width: 30%;
+    margin-right: auto;
+  }
+  .display-item {
+    /*changed*/
+    width: 70%;
+    margin-left: 50px;
+  }
+  .display-item button {
+    margin: 10px 10px 10px auto;
+    display: block;
+  }
+  .add-item form {
+    width: 100%;
+    overflow: hidden;
+  }
+  input {
+    font-size: 22px;
+    padding: 18px 22px;
+    font-size: 16px;
+    margin-bottom: 17px;
+    display: block;
+    width: 100%;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    width: calc(50% - 50px);
+    margin-right: 50px;
+    margin-bottom: 30px;
+  }
+  h2 {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+  }
+  li h3 {
+    margin: 0;
+    padding: 15px;
+  }
+  li p {
+    padding: 15px;
+    margin: 0;
+  }
+  form button {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .fa-trash-o {
+    font-size: 16px;
+  }
+  button {
+    border-radius: 2px;
+    min-width: 88px;
+    min-width: 120px;
+    font-size: 14px;
+    padding: 10px 6px;
+  }
+  .user-profile {
+    position: fixed;
+    /*changed*/
+    bottom: 20px;
+    right: 20px;
+    width: 90px;
+    height: 90px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+  header {
+    padding: 33px 0 25px 15px;
+  }
+  header p {
+    width: 400px;
+    margin: 0 auto;
+  }
+  header .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  header h1 {
+    font-size: 25px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+  }
+  .fa {
+    font-size: 22px;
+    transform: translateY(50deg);
+  }
+  header i {
+    vertical-align: middle;
+    margin-left: 12px;
+  }
+  .container {
+    display: flex;
+    /*changed*/
+    max-width: 980px;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+  .wrapper {
+    /*changed*/
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .add-item {
+    border-top: 3px solid #103D5D;
+    margin-right: 50px;
+    padding: 60px 18px;
+    /*margin-bottom: 34px;*/
+    /*changed*/
+    width: 25%;
+    margin-right: auto;
+  }
+  .display-item {
+    /*changed*/
+    width: 75%;
+    /*changed*/
+    margin-left: 30px;
+  }
+  .display-item button {
+    margin: 10px 10px 10px auto;
+    display: block;
+  }
+  .add-item form {
+    width: 100%;
+    overflow: hidden;
+  }
+  input {
+    font-size: 22px;
+    /*changed*/
+    padding: 10px 15px;
+    /*changed*/
+    font-size: 14px;
+    margin-bottom: 17px;
+    display: block;
+    width: 100%;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    /*changed*/
+    width: calc(50% - 30px);
+    /*changed*/
+    margin-right: 30px;
+    /*changed*/
+    margin-bottom: 20px;
+  }
+  h2 {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+  }
+  li h3 {
+    margin: 0;
+    /*changed*/
+    padding: 10px 15px;
+    /*changed*/
+    font-size: 16px;
+  }
+  li p {
+    /*changed*/
+    padding: 10px;
+    margin: 0;
+    /*changed*/
+    font-size: 14px;
+  }
+  form button {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .fa-trash-o {
+    /*changed*/
+    font-size: 14px;
+  }
+  button {
+    border-radius: 2px;
+    min-width: 88px;
+    min-width: 120px;
+    /*changed*/
+    font-size: 12px;
+    padding: 10px 6px;
+  }
+  .user-profile {
+    position: fixed;
+
+
+    /*changed*/
+    bottom: 15px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  header {
+    padding: 33px 0 25px 15px;
+  }
+  header p {
+    width: 400px;
+    margin: 0 auto;
+  }
+  header .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  header h1 {
+    font-size: 25px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+  }
+  .fa {
+    font-size: 22px;
+    transform: translateY(50deg);
+  }
+  header i {
+    vertical-align: middle;
+    margin-left: 12px;
+  }
+  .container {
+    display: flex;
+    /*changed*/
+    max-width: 980px;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+  .wrapper {
+    /*changed*/
+    max-width: 530px;
+    margin: 0 auto;
+  }
+  .add-item {
+    border-top: 3px solid #103D5D;
+    margin-right: 50px;
+    /*changed*/
+    padding: 30px 5px;
+    /*changed*/
+    margin-bottom: 5px;
+    /*changed*/
+    width: 30%;
+    margin-right: auto;
+  }
+  .display-item {
+    /*changed*/
+    width: 70%;
+    /*changed*/
+    margin-left: 10px;
+  }
+  .display-item button {
+    margin: 10px 10px 10px auto;
+    display: block;
+  }
+  .add-item form {
+    width: 100%;
+    overflow: hidden;
+  }
+  input {
+    font-size: 22px;
+    /*changed*/
+    padding: 10px 8px;
+    /*changed*/
+    font-size: 14px;
+    margin-bottom: 17px;
+    display: block;
+    width: 100%;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    /*changed*/
+    width: calc(50% - 5px);
+    /*changed*/
+    margin-right: 5px;
+    /*changed*/
+    margin-bottom: 20px;
+  }
+  h2 {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+  }
+  li h3 {
+    margin: 0;
+    /*changed*/
+    padding: 10px 10px;
+    /*changed*/
+    font-size: 13px;
+  }
+  li p {
+    /*changed*/
+    padding: 10px;
+    margin: 0;
+    /*changed*/
+    font-size: 12px;
+  }
+  form button {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .fa-trash-o {
+    /*changed*/
+    font-size: 13px;
+  }
+  button {
+    border-radius: 2px;
+    min-width: 88px;
+    /*changed*/
+    min-width: 100px;
+    /*changed*/
+    font-size: 11px;
+    /*changed*/
+    padding: 10px 6px;
+  }
+  .user-profile {
+    position: fixed;
+
+
+    /*changed*/
+    bottom: 5px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+
+
+
+
+@media (max-width: 576px) {
+  header {
+    /*changed*/
+    padding: 20px 0 20px 10px;
+  }
+  header p {
+    /*changed*/
+    /*width: 400px;*/
+    margin: 0 auto;
+  }
+  header .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  header h1 {
+    /*changed*/
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+  }
+  .fa {
+    font-size: 22px;
+    transform: translateY(50deg);
+  }
+  header i {
+    vertical-align: middle;
+    margin-left: 12px;
+  }
+  .container {
+    display: flex;
+    /*changed*/
+    max-width: 980px;
+    margin: 0 auto;
+    /*changed*/
+    padding-top: 10px;
+
+
+    /*changed*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper {
+    /*changed*/
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .add-item {
+    border-top: 3px solid #103D5D;
+    /*changed*/
+    margin-right: 0;
+    /*changed*/
+    padding: 15px 5px;
+    /*changed*/
+    margin-bottom: 20px;
+    /*changed*/
+    /*width: 100%;*/
+    max-width: 100%;
+    min-width: 95%;
+    /*margin-right: auto;*/
+  }
+  .display-item {
+    /*changed*/
+    width: calc(100% - 5px);
+    /*changed*/
+    margin-left: 5px;
+  }
+  .display-item button {
+    /*changed*/
+    margin: 10px 5px 10px auto;
+    display: block;
+  }
+  .add-item form {
+    width: 100%;
+    overflow: hidden;
+  }
+  input {
+    font-size: 22px;
+    /*changed*/
+    padding: 8px;
+    /*changed*/
+    font-size: 14px;
+    /*changed*/
+    margin-bottom: 15px;
+    display: block;
+    /*changed*/
+    width: 100%;
+  }
+  /*changed*/
+  .wrapper--list{
+    width: calc(100% - 5px);
+    margin: 0;
+    padding: 0;
+    max-width: 570px;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  li {
+    /*changed*/
+    width: calc(50% - 5px);
+    /*changed*/
+    margin-right: 5px;
+    /*changed*/
+    margin-bottom: 10px;
+  }
+  h2 {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+  }
+  li h3 {
+    margin: 0;
+    /*changed*/
+    padding: 10px 10px;
+    /*changed*/
+    font-size: 13px;
+  }
+  li p {
+    /*changed*/
+    padding: 10px;
+    margin: 0;
+    /*changed*/
+    font-size: 12px;
+  }
+  form button {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .fa-trash-o {
+    /*changed*/
+    font-size: 13px;
+  }
+  button {
+    border-radius: 2px;
+    min-width: 88px;
+    /*changed*/
+    min-width: 100px;
+    /*changed*/
+    font-size: 11px;
+    /*changed*/
+    padding: 10px 6px;
+  }
+  .user-profile {
+    position: fixed;
+
+
+    /*changed*/
+    bottom: 5px;
+    right: 5px;
+    left: auto;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+
+
+
+@media (max-width: 350px) {
+  header h1 {
+    font-size: 17px;
+  }
+  .container {
+    max-width: 340px;
+  }
+  .wrapper {
+    max-width: 280px;
+  }
+  .add-item {
+    padding: 10px 5px;
+    margin-bottom: 10px;
+  }
+  input {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  .wrapper--list{
+    max-width: 300px;
+  }
+  li h3 {
+    font-size: 12px;
+  }
+  li p {
+    font-size: 11px;
+  }
+  form button {
+    margin-top: 8px;
+  }
+  .fa-trash-o {
+    font-size: 12px;
+  }
+  button {
+    min-width: 70px;
+    min-width: 80px;
+    font-size: 10px;
+    padding: 10px 6px;
+  }
+  .user-profile {
+    width: 40px;
+    height: 40px;
+  }
+}

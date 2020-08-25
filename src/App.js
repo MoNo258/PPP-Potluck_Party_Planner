@@ -121,7 +121,7 @@ class App extends Component {
                                 </form>
                             </section>
                             <section className='display-item'>
-                                <div className="wrapper">
+                                <div className="wrapper wrapper--list">
                                     <ul>
                                         {this.state.items.map((item) => {
                                             return (
